@@ -1,0 +1,10 @@
+<launch>
+
+    <param name="state" value="0" />
+    <param name="TimeforSleeping" value="10" />
+    <param name="TimetoGetPosition" value="4" />
+    <param name="WaitForANewpointingGesture" value="5" />
+
+    <node name="state_machine" pkg="exp_ass1" type="state_machine.py" output="screen"/>
+    <node name="display" pkg="exp_ass1" type="Display.py" output="screen"/>
+</launch>

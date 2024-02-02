@@ -123,7 +123,7 @@ class Play(smach.State):
         TimetoGetPosition = rospy.get_param("/TimetoGetPosition")
         ## wait for a while
         time.sleep(TimetoGetPosition)
-        WaitingForANewPointingGesture = rospy.get_param('/WaitForANewPointingGesture')
+        WaitingForANewPointingGesture = rospy.get_param("WaitForANewpointingGesture")
         ## wait for a new pointing Gesture
         time.sleep(WaitingForANewPointingGesture)
         ## subsribe to Pointing Gesture Topic
