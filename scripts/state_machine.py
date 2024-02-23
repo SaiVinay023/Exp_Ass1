@@ -156,7 +156,7 @@ class Play(smach.State):
         self.home = Point()
     def execute(self, userdata):
 
-        rospy.set_param('state', 3)
+        rospy.set_param('state', 4)
 
         ## Main Loop
         while True:
@@ -185,6 +185,8 @@ class Play(smach.State):
             TimetoGetPosition = rospy.get_param("/TimetoGetPosition")
             ## sleep for a while
             time.sleep(TimetoGetPosition)
+
+            return 'outcome2'
 
 
 ## Main function
