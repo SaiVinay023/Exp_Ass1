@@ -1,4 +1,13 @@
-# Exp_Ass1
+# petbot using ROS1
+
+#Project Details
+PetBot is a simulated robotic pet that interacts with humans in a discrete 2D environment. The robot can exhibit three primary behaviors:
+
+Normal Behavior: In this mode, the robot moves randomly around the environment, exploring its surroundings.
+
+Sleep Mode: The robot returns to its home position, enters a sleep state for a specified duration, and then resumes normal behavior. This feature allows for a realistic rest period, enhancing its pet-like qualities.
+
+Play Mode: When activated, the robot approaches the human's location and awaits a pointing gesture. Upon receiving the gesture, it moves to the specified location, returns to the human, and remains poised for the next interaction. After a set duration in play mode, the robot transitions back to its normal behavior.
 
 # Behavioral Architecture
 Assuming a Robot, simulating a pet, that interacts with a human and moves in a discrete 2D environment. 
@@ -66,6 +75,8 @@ To visualize the smach viewer:
     rosrun smach_viewer smach_viewer.py
     
     ```
+##
+
    
 ## Working Hypothesis 
 The assumptions are: 
@@ -76,7 +87,21 @@ The assumptions are:
 5) The random position in the normal state is defined by "GenerateRandomPosition" function. 
 6) The home position is fixed (1,1,0). 
 7) The person location and the pointing gesture are received by the Commander node. 
-8) During the execution of one state, after giving a target, the robot waits for a while (predefined time). 
+8) During the execution of one state, after giving a target, the robot waits for a while (predefined time).
+
+##**Interaction**
+The human can engage with PetBot through simple pointing gestures and speech commands, making the experience intuitive and engaging. This design fosters a playful and interactive relationship between the robot and its human counterpart, simulating the companionship of a real pet.
+
+Tools Used
+Programming Language: Python
+Libraries: Pygame for environment simulation, SpeechRecognition for voice interaction, and OpenCV for gesture recognition.
+Framework: ROS (Robot Operating System) for integrating robotic functionalities.
+Technical Implementation Methodology
+Environment Setup: Create a discrete 2D grid environment using Pygame to visualize the robot's movements and interactions.
+Behavioral Logic: Implement state management to handle the three distinct behaviors of the robot, including timers for sleep and transition logic between states.
+User Interaction: Develop gesture and speech recognition modules to enable seamless interaction, allowing the robot to respond appropriately to human commands.
+Simulation and Testing: Conduct thorough testing of the robot's behaviors and interaction capabilities to ensure a smooth and engaging user experience.
+This project aims to provide a captivating simulation of a robotic pet, blending fun, interactivity, and technology.
 
 ## System's features 
 The sys can show on the terminal what the robot is doing and the what the behavior's state is executing. 
