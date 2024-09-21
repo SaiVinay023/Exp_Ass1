@@ -1,6 +1,7 @@
 # petbot using ROS1
 
 #Project Details
+
 PetBot is a simulated robotic pet that interacts with humans in a discrete 2D environment. The robot can exhibit three primary behaviors:
 
 Normal Behavior: In this mode, the robot moves randomly around the environment, exploring its surroundings.
@@ -11,7 +12,9 @@ Play Mode: When activated, the robot approaches the human's location and awaits 
 
 # Behavioral Architecture
 Assuming a Robot, simulating a pet, that interacts with a human and moves in a discrete 2D environment. 
+
 The robot may have three behaviors : normal (in which it moves randomly), sleep (in which it gets the home position, sleeps for a time and returns in normal behavior) and play (in which it goes in person location, waits for a poiting gesture, goes in the pointed location, comes back to the person and waits for the next pointing gestures. After some time it returns to the normal behavior).
+
 The human can interact by pointing gestures and speech. 
 
 ## ROS Architecture
@@ -93,14 +96,22 @@ The assumptions are:
 The human can engage with PetBot through simple pointing gestures and speech commands, making the experience intuitive and engaging. This design fosters a playful and interactive relationship between the robot and its human counterpart, simulating the companionship of a real pet.
 
 Tools Used
+
 Programming Language: Python
+
 Libraries: Pygame for environment simulation, SpeechRecognition for voice interaction, and OpenCV for gesture recognition.
+
 Framework: ROS (Robot Operating System) for integrating robotic functionalities.
 Technical Implementation Methodology
+
 Environment Setup: Create a discrete 2D grid environment using Pygame to visualize the robot's movements and interactions.
+
 Behavioral Logic: Implement state management to handle the three distinct behaviors of the robot, including timers for sleep and transition logic between states.
+
 User Interaction: Develop gesture and speech recognition modules to enable seamless interaction, allowing the robot to respond appropriately to human commands.
+
 Simulation and Testing: Conduct thorough testing of the robot's behaviors and interaction capabilities to ensure a smooth and engaging user experience.
+
 This project aims to provide a captivating simulation of a robotic pet, blending fun, interactivity, and technology.
 
 ## System's features 
